@@ -1,63 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Life & Moral Stories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- AdSense code will be added here later -->
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       background: #f4f4f4;
       color: #222;
+      line-height: 1.6;
     }
+
     header {
       background: #222;
-      color: white;
-      padding: 20px;
+      color: #fff;
+      padding: 30px 15px;
       text-align: center;
     }
-    main {
-      padding: 20px;
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
     }
+
+    header p {
+      margin-top: 8px;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
     section {
-      background: white;
-      padding: 15px;
-      margin-bottom: 15px;
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
       border-radius: 8px;
     }
+
+    h2 {
+      margin-top: 0;
+      color: #111;
+    }
+
+    .story-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .read-more:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
     footer {
-      text-align: center;
-      padding: 10px;
       background: #ddd;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Welcome to My Website</h1>
-  <p>Built with HTML • Hosted on Netlify</p>
-</header>
+  <header>
+    <h1>Life & Moral Stories</h1>
+    <p>Short stories that make you think, feel, and grow</p>
+  </header>
 
-<main>
-  <section>
-    <h2>About</h2>
-    <p>This is my first website. Ads will be added later.</p>
-  </section>
+  <main>
 
-  <section>
-    <h2>Content</h2>
-    <p>More content coming soon.</p>
-  </section>
-</main>
+    <section>
+      <h2>Featured Story</h2>
+      <div class="story-title">The Choice He Almost Ignored</div>
 
-<footer>
-  <p>© 2026 My Website</p>
-</footer>
+      <p>
+        He almost walked past the message. Just another notification, he thought.
+        Life was busy, and there was always something more important to do.
+      </p>
+
+      <p>
+        But that one small decision — to stop, read, and respond — changed the
+        direction of his life in ways he never imagined.
+      </p>
+
+      <p><strong>Lesson:</strong> The smallest choices often carry the biggest consequences.</p>
+
+      <a class="read-more" href="#">Read full story →</a>
+    </section>
+
+    <section>
+      <h2>Why This Site Exists</h2>
+      <p>
+        This website shares original life and moral stories created to inspire,
+        encourage reflection, and remind us of values that truly matter.
+      </p>
+      <p>
+        Every story here is written to connect with real emotions and everyday
+        situations we all experience.
+      </p>
+    </section>
+
+    <section>
+      <h2>More Stories</h2>
+      <ul>
+        <li><a href="#">She Chose Kindness When It Hurt</a></li>
+        <li><a href="#">The Man Who Listened Too Late</a></li>
+        <li><a href="#">A Silent Act That Changed a Family</a></li>
+        <li><a href="#">He Walked Away — and Found Peace</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Life & Moral Stories</p>
+    <p>
+      <a href="#">About</a> |
+      <a href="#">Contact</a> |
+      <a href="#">Privacy Policy</a>
+    </p>
+  </footer>
 
 </body>
 </html>
