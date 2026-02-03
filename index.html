@@ -5,6 +5,8 @@
   <title>Opportunities & Digital Skills</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- AdSense code will be added here later -->
+
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -13,146 +15,155 @@
       color: #222;
       line-height: 1.6;
     }
-
     header {
       background: #1f2937;
       color: #fff;
       padding: 28px 16px;
       text-align: center;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    header p {
-      margin-top: 8px;
-      opacity: 0.9;
-    }
+    header h1 { margin: 0; font-size: 28px; }
+    header p { margin-top: 8px; opacity: .9; }
 
     nav {
       background: #111827;
       display: flex;
       justify-content: center;
       gap: 18px;
-      padding: 12px;
+      padding: 10px;
       flex-wrap: wrap;
     }
-
     nav a {
       color: #e5e7eb;
       text-decoration: none;
       font-weight: bold;
       font-size: 14px;
     }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a:hover { text-decoration: underline; }
 
     main {
       max-width: 900px;
       margin: 22px auto;
       padding: 0 16px;
     }
-
     section {
       background: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
+      padding: 18px;
+      margin-bottom: 18px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    }
+    h2 { margin-top: 0; }
+
+    .tag {
+      display: inline-block;
+      background: #eef2ff;
+      color: #3730a3;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-right: 6px;
     }
 
-    h2 {
-      margin-top: 0;
+    .list li { margin-bottom: 8px; }
+
+    .cta {
+      display: inline-block;
+      margin-top: 10px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
     }
+    .cta:hover { text-decoration: underline; }
 
     footer {
       background: #e5e7eb;
       text-align: center;
-      padding: 16px;
+      padding: 14px;
       font-size: 14px;
     }
-
-    footer a {
-      color: #111;
-      text-decoration: none;
-      margin: 0 6px;
-      font-weight: bold;
-    }
+    footer a { color: #111; text-decoration: none; margin: 0 8px; font-weight: bold; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Opportunities & Digital Skills</h1>
-    <p>Jobs, online skills, and real stories to help you grow</p>
-  </header>
+<header>
+  <h1>Opportunities & Digital Skills</h1>
+  <p>Jobs, online skills, and real stories to help you grow</p>
+</header>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="jobs.html">Jobs</a>
-    <a href="skills.html">Online Skills</a>
-    <a href="stories.html">Stories</a>
-    <a href="guides.html">Guides</a>
-  </nav>
+<!-- ✅ ONE NAV ONLY (must be inside body) -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="jobs.html">Jobs</a>
+  <a href="skills.html">Online Skills</a>
+  <a href="stories.html">Stories</a>
+  <a href="guides.html">Guides</a>
+</nav>
 
-  <!-- MAIN CONTENT -->
-  <main>
+<main>
 
-    <section>
-      <h2>Welcome</h2>
-      <p>
-        This platform is built to help you discover job opportunities,
-        learn valuable online skills, and stay motivated through real-life
-        stories and experiences.
-      </p>
-    </section>
-
-    <section>
-      <h2>Job Opportunities</h2>
-      <p>
-        We share job openings, internships, and remote opportunities.
-        All listings are summarized for clarity — always verify details
-        from official sources before applying.
-      </p>
-    </section>
-
-    <section>
-      <h2>Online Skills</h2>
-      <p>
-        Learn practical digital skills such as content creation,
-        affiliate marketing (educational), copywriting, and more.
-        No shortcuts — just clear guidance.
-      </p>
-    </section>
-
-    <section>
-      <h2>Stories & Experiences</h2>
-      <p>
-        Read short stories and real experiences designed to inspire,
-        teach lessons, and keep you motivated on your journey.
-      </p>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Opportunities & Digital Skills</p>
+  <!-- FEATURED OPPORTUNITY -->
+  <section>
+    <span class="tag">Opportunity</span>
+    <h2>Featured Opportunity</h2>
+    <h3>Entry-Level Digital Assistant (Remote)</h3>
     <p>
-      <a href="about.html">About</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="disclaimer.html">Disclaimer</a> |
-      <a href="terms.html">Terms</a>
+      This opportunity is suitable for beginners interested in online work.
+      Responsibilities include basic content support and communication tasks.
     </p>
-  </footer>
+    <p><strong>Note:</strong> Details are summarized for clarity. Always apply via the official source.</p>
 
-</body>
-</html>
+    <!-- ✅ Better: takes them to Jobs page -->
+    <a class="cta" href="jobs.html">View jobs →</a>
+  </section>
+
+  <!-- ONLINE SKILLS -->
+  <section>
+    <span class="tag">Learn</span>
+    <h2>Online Skills You Can Learn</h2>
+    <ul class="list">
+      <li><strong>Affiliate Marketing (Basics):</strong> Understand how recommendations work—no income promises.</li>
+      <li><strong>Copywriting:</strong> Writing clearly to communicate ideas and offers.</li>
+      <li><strong>Content Creation:</strong> Planning and publishing helpful content.</li>
+      <li><strong>TikTok & YouTube Basics:</strong> Audience growth, consistency, and content ideas.</li>
+    </ul>
+
+    <!-- ✅ Better: goes to Skills page -->
+    <a class="cta" href="skills.html">Explore skills →</a>
+  </section>
+
+  <!-- STORIES -->
+  <section>
+    <span class="tag">Stories</span>
+    <h2>Stories & Experiences</h2>
+    <h3>The Skill He Learned Too Late</h3>
+    <p>
+      He chased opportunities without learning the basics. When he finally slowed
+      down to build a skill, everything changed.
+    </p>
+    <p><strong>Lesson:</strong> Skills create options—patience builds results.</p>
+
+    <!-- ✅ Better: goes to Stories page -->
+    <a class="cta" href="stories.html">Read stories →</a>
+  </section>
+
+  <!-- GUIDES -->
+  <section>
+    <span class="tag">Guides</span>
+    <h2>Helpful Guides</h2>
+    <ul class="list">
+      <li>How to apply for jobs safely online</li>
+      <li>Beginner checklist for learning digital skills</li>
+      <li>How to avoid scams and misleading offers</li>
+    </ul>
+
+    <!-- ✅ Better: goes to Guides page -->
+    <a class="cta" href="guides.html">Read guides →</a>
+  </section>
+
+</main>
+
+<footer>
+  <p>©
