@@ -15,6 +15,7 @@
       color: #222;
       line-height: 1.6;
     }
+
     header {
       background: #1f2937;
       color: #fff;
@@ -45,6 +46,7 @@
       margin: 22px auto;
       padding: 0 16px;
     }
+
     section {
       background: #fff;
       padding: 18px;
@@ -52,6 +54,7 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,.04);
     }
+
     h2 { margin-top: 0; }
 
     .tag {
@@ -90,63 +93,57 @@
     footer a:hover { text-decoration: underline; }
 
     /* ===============================
-       ✅ WHATSAPP FLOATING BUTTON CSS
+       WHATSAPP FLOATING BUTTON
        =============================== */
     .wa-float {
       position: fixed;
       right: 16px;
       bottom: 16px;
-      z-index: 9999;
+      z-index: 99999;
       display: flex;
       align-items: center;
       gap: 10px;
-      cursor: pointer;
-      animation: fadeInUp 1s ease;
+      text-decoration: none;
     }
 
     .wa-bubble {
       background: #25D366;
       color: #fff;
       padding: 10px 14px;
-      border-radius: 20px;
+      border-radius: 999px;
       font-size: 14px;
       font-weight: bold;
+      box-shadow: 0 8px 20px rgba(0,0,0,.2);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all .4s ease;
       white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(0,0,0,.2);
-      transition: opacity .4s ease, transform .4s ease;
+    }
+
+    .wa-bubble.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .wa-icon {
-      width: 52px;
-      height: 52px;
+      width: 54px;
+      height: 54px;
       background: #25D366;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,.25);
-      transition: transform .3s ease;
-    }
-
-    .wa-icon:hover {
-      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,.25);
     }
 
     .wa-icon svg {
-      width: 26px;
-      height: 26px;
-      fill: white;
+      width: 28px;
+      height: 28px;
+      display: block;
     }
 
-    .hidden {
-      opacity: 0;
-      transform: translateY(10px);
-      pointer-events: none;
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .wa-icon svg path {
+      fill: #fff;
     }
   </style>
 </head>
@@ -176,7 +173,6 @@
       This opportunity is suitable for beginners interested in online work.
       Responsibilities include basic content support and communication tasks.
     </p>
-    <p><strong>Note:</strong> Details are summarized for clarity.</p>
     <a class="cta" href="jobs.html">View jobs →</a>
   </section>
 
@@ -184,10 +180,10 @@
     <span class="tag">Learn</span>
     <h2>Online Skills You Can Learn</h2>
     <ul class="list">
-      <li><strong>Affiliate Marketing:</strong> Basics of ethical promotion.</li>
-      <li><strong>Copywriting:</strong> Writing clearly to communicate ideas.</li>
-      <li><strong>Content Creation:</strong> Planning and publishing content.</li>
-      <li><strong>TikTok & YouTube:</strong> Growth and content strategy.</li>
+      <li>Affiliate Marketing (Basics)</li>
+      <li>Copywriting</li>
+      <li>Content Creation</li>
+      <li>TikTok & YouTube Growth</li>
     </ul>
     <a class="cta" href="skills.html">Explore skills →</a>
   </section>
@@ -195,24 +191,10 @@
   <section>
     <span class="tag">Stories</span>
     <h2>Stories & Experiences</h2>
-    <h3>The Skill He Learned Too Late</h3>
     <p>
-      He chased opportunities without learning the basics. When he finally slowed
-      down to build a skill, everything changed.
+      Skills don’t change lives overnight — consistency does.
     </p>
-    <p><strong>Lesson:</strong> Skills create options.</p>
     <a class="cta" href="stories.html">Read stories →</a>
-  </section>
-
-  <section>
-    <span class="tag">Guides</span>
-    <h2>Helpful Guides</h2>
-    <ul class="list">
-      <li>How to apply for jobs safely online</li>
-      <li>Beginner checklist for digital skills</li>
-      <li>Avoiding scams and fake offers</li>
-    </ul>
-    <a class="cta" href="guides.html">Read guides →</a>
   </section>
 
 </main>
@@ -229,30 +211,23 @@
 </footer>
 
 <!-- ===============================
-     ✅ WHATSAPP FLOATING HTML
+     WHATSAPP FLOATING BUTTON
      =============================== -->
-<a href="https://wa.me/234000000000" target="_blank" class="wa-float">
-  <div class="wa-bubble" id="waText">Join our WhatsApp channel</div>
+<a href="https://wa.me/233XXXXXXXXX" target="_blank" class="wa-float">
+  <div class="wa-bubble" id="waBubble">Join our WhatsApp channel</div>
   <div class="wa-icon">
     <svg viewBox="0 0 32 32">
-      <path d="M16.01 2.002c-7.732 0-14.01 6.278-14.01 14.01 0 2.47.64 4.885 1.857 7.02L2 30l7.174-1.848a13.94 13.94 0 006.836 1.782h.002c7.73 0 14.01-6.277 14.01-14.01 0-3.746-1.46-7.27-4.105-9.915C23.28 3.462 19.756 2.002 16.01 2.002zm0 25.53a11.52 11.52 0 01-5.88-1.616l-.42-.25-4.256 1.097 1.134-4.145-.274-.427a11.507 11.507 0 01-1.754-6.04c0-6.353 5.168-11.52 11.52-11.52 3.077 0 5.972 1.197 8.147 3.372a11.47 11.47 0 013.372 8.147c0 6.353-5.167 11.52-11.52 11.52zm6.318-8.617c-.345-.173-2.04-1.006-2.355-1.12-.314-.115-.544-.173-.773.173-.23.345-.888 1.12-1.09 1.35-.2.23-.402.258-.747.086-.345-.173-1.456-.537-2.77-1.713-1.022-.91-1.713-2.032-1.914-2.377-.2-.345-.021-.53.152-.703.156-.155.345-.402.517-.603.173-.2.23-.345.345-.575.115-.23.058-.43-.029-.603-.086-.173-.773-1.862-1.06-2.55-.279-.669-.562-.578-.773-.589l-.659-.012c-.23 0-.603.086-.917.43-.314.345-1.203 1.176-1.203 2.866s1.231 3.325 1.403 3.554c.173.23 2.425 3.704 5.878 5.19.822.355 1.464.567 1.964.726.825.262 1.575.225 2.17.136.662-.099 2.04-.833 2.327-1.638.287-.805.287-1.495.2-1.638-.086-.144-.315-.23-.66-.402z"/>
+      <path d="M16 2C8.3 2 2 8.3 2 16c0 2.5.7 4.9 2 7.1L2 30l7.1-1.9C11.2 29.3 13.6 30 16 30c7.7 0 14-6.3 14-14S23.7 2 16 2z"/>
     </svg>
   </div>
 </a>
 
-<!-- ===============================
-     ✅ WHATSAPP ANIMATION SCRIPT
-     =============================== -->
 <script>
-  const waText = document.getElementById('waText');
-
-  setTimeout(() => {
-    waText.classList.add('hidden');
-  }, 3500);
-
-  setTimeout(() => {
-    waText.classList.remove('hidden');
-  }, 9000);
+  window.addEventListener("load", function () {
+    const bubble = document.getElementById("waBubble");
+    bubble.classList.add("show");
+    setTimeout(() => bubble.classList.remove("show"), 4500);
+  });
 </script>
 
 </body>
