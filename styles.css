@@ -59,6 +59,69 @@ main {
   padding: 18px;
   margin-bottom: 18px;
   border-radius: 10px;
+} 
+/* WhatsApp Floating Button */
+.wa-float {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wa-bubble {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 10px 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 280px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity .35s ease, transform .35s ease;
+}
+
+.wa-bubble.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.wa-bubble strong { font-size: 14px; }
+.wa-bubble span { font-size: 13px; color: #374151; }
+
+.wa-close {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.wa-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  background: #25D366;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+  text-decoration: none;
+}
+
+.wa-btn:active { transform: scale(0.98); }
+
+.wa-icon {
+  width: 28px;
+  height: 28px;
+  fill: #ffffff;
 }
 
 a { color: var(--link); }
