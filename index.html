@@ -2,233 +2,279 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Opportunities & Digital Skills</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opportunities & Digital Skills</title>
+  <meta name="description" content="Jobs, online skills, guides, and real stories to help you grow." />
 
   <!-- AdSense code will be added here later -->
 
   <style>
-    body {
+    :root{
+      --bg:#f4f6f8;
+      --text:#222;
+      --brand:#1f2937;
+      --nav:#111827;
+      --card:#fff;
+      --link:#2563eb;
+      --muted:#6b7280;
+      --shadow:0 2px 8px rgba(0,0,0,.06);
+      --radius:12px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
       font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #222;
-      line-height: 1.6;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
     }
 
-    header {
-      background: #1f2937;
-      color: #fff;
-      padding: 28px 16px;
-      text-align: center;
+    header{
+      background:var(--brand);
+      color:#fff;
+      padding:28px 16px;
+      text-align:center;
     }
-    header h1 { margin: 0; font-size: 28px; }
-    header p { margin-top: 8px; opacity: .9; }
+    header h1{ margin:0; font-size:28px; }
+    header p{ margin:8px 0 0; opacity:.9; }
 
-    nav {
-      background: #111827;
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      padding: 10px;
-      flex-wrap: wrap;
+    nav{
+      background:var(--nav);
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      padding:10px 12px;
+      flex-wrap:wrap;
+      position:sticky;
+      top:0;
+      z-index:10;
     }
-    nav a {
-      color: #e5e7eb;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
+    nav a{
+      color:#e5e7eb;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      padding:6px 8px;
+      border-radius:10px;
     }
-    nav a:hover { text-decoration: underline; }
+    nav a:hover{ text-decoration:underline; }
 
-    main {
-      max-width: 900px;
-      margin: 22px auto;
-      padding: 0 16px;
-    }
-
-    section {
-      background: #fff;
-      padding: 18px;
-      margin-bottom: 18px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    main{
+      max-width:900px;
+      margin:22px auto;
+      padding:0 16px;
     }
 
-    h2 { margin-top: 0; }
-
-    .tag {
-      display: inline-block;
-      background: #eef2ff;
-      color: #3730a3;
-      padding: 4px 8px;
-      border-radius: 999px;
-      font-size: 12px;
-      margin-right: 6px;
+    .card{
+      background:var(--card);
+      padding:18px;
+      margin-bottom:18px;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
     }
 
-    .list li { margin-bottom: 8px; }
+    h2{ margin:0 0 10px; }
+    h3{ margin:10px 0 6px; }
 
-    .cta {
-      display: inline-block;
-      margin-top: 10px;
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: bold;
+    .tag{
+      display:inline-block;
+      background:#eef2ff;
+      color:#3730a3;
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700;
+      margin-bottom:10px;
     }
-    .cta:hover { text-decoration: underline; }
 
-    footer {
-      background: #e5e7eb;
-      text-align: center;
-      padding: 14px;
-      font-size: 14px;
+    ul.list{ margin:10px 0 0; padding-left:18px; }
+    ul.list li{ margin-bottom:8px; }
+
+    .cta{
+      display:inline-block;
+      margin-top:10px;
+      color:var(--link);
+      text-decoration:none;
+      font-weight:800;
     }
-    footer a {
-      color: #111;
-      text-decoration: none;
-      margin: 0 8px;
-      font-weight: bold;
+    .cta:hover{ text-decoration:underline; }
+
+    .muted{ color:var(--muted); font-size:14px; }
+
+    footer{
+      background:#e5e7eb;
+      text-align:center;
+      padding:14px 10px;
+      font-size:14px;
+      margin-top:20px;
     }
-    footer a:hover { text-decoration: underline; }
+    footer a{
+      color:#111;
+      text-decoration:none;
+      margin:0 8px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+    footer a:hover{ text-decoration:underline; }
 
     /* ===============================
-       WHATSAPP FLOATING BUTTON
+       WhatsApp Floating Button + Bubble
        =============================== */
-    .wa-float {
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      z-index: 99999;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
+    .wa-float{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:99999;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
     }
 
-    .wa-bubble {
-      background: #25D366;
-      color: #fff;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: bold;
-      box-shadow: 0 8px 20px rgba(0,0,0,.2);
-      opacity: 0;
-      transform: translateY(10px);
-      transition: all .4s ease;
-      white-space: nowrap;
+    .wa-bubble{
+      background:#25D366;
+      color:#fff;
+      padding:10px 14px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:800;
+      box-shadow:0 8px 20px rgba(0,0,0,.18);
+      opacity:0;
+      transform:translateY(10px);
+      transition:all .35s ease;
+      white-space:nowrap;
+      max-width:72vw;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .wa-bubble.show{
+      opacity:1;
+      transform:translateY(0);
     }
 
-    .wa-bubble.show {
-      opacity: 1;
-      transform: translateY(0);
+    .wa-icon{
+      width:54px;
+      height:54px;
+      background:#25D366;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 8px 20px rgba(0,0,0,.22);
+      flex:0 0 auto;
     }
+    .wa-icon svg{ width:28px; height:28px; display:block; }
+    .wa-icon svg path{ fill:#fff; }
 
-    .wa-icon {
-      width: 54px;
-      height: 54px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,.25);
-    }
-
-    .wa-icon svg {
-      width: 28px;
-      height: 28px;
-      display: block;
-    }
-
-    .wa-icon svg path {
-      fill: #fff;
+    /* small screens: hide bubble quicker */
+    @media (max-width:420px){
+      header h1{ font-size:24px; }
+      .wa-bubble{ font-size:13px; }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Opportunities & Digital Skills</h1>
-  <p>Jobs, online skills, and real stories to help you grow</p>
-</header>
+  <header>
+    <h1>Opportunities & Digital Skills</h1>
+    <p>Jobs, online skills, guides, and real stories to help you grow</p>
+  </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="jobs.html">Jobs</a>
-  <a href="skills.html">Online Skills</a>
-  <a href="stories.html">Stories</a>
-  <a href="guides.html">Guides</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="skills.html">Online Skills</a>
+    <a href="stories.html">Stories</a>
+    <a href="guides.html">Guides</a>
+  </nav>
 
-<main>
+  <main>
 
-  <section>
-    <span class="tag">Opportunity</span>
-    <h2>Featured Opportunity</h2>
-    <h3>Entry-Level Digital Assistant (Remote)</h3>
+    <!-- FEATURED OPPORTUNITY -->
+    <section class="card">
+      <span class="tag">Opportunity</span>
+      <h2>Featured Opportunity</h2>
+      <h3>Entry-Level Digital Assistant (Remote)</h3>
+      <p>
+        This opportunity is suitable for beginners interested in online work.
+        Responsibilities may include basic content support and communication tasks.
+      </p>
+      <p class="muted"><strong>Note:</strong> Always apply via the official source. We don’t recruit or charge fees.</p>
+      <a class="cta" href="jobs.html">View jobs →</a>
+    </section>
+
+    <!-- ONLINE SKILLS -->
+    <section class="card">
+      <span class="tag">Learn</span>
+      <h2>Online Skills You Can Learn</h2>
+      <ul class="list">
+        <li><strong>Affiliate Marketing (Basics):</strong> Understand how recommendations work—no income promises.</li>
+        <li><strong>Copywriting:</strong> Learn how to write clearly to influence and inform.</li>
+        <li><strong>Content Creation:</strong> Plan, create, and publish helpful content consistently.</li>
+        <li><strong>TikTok & YouTube Growth:</strong> Content ideas, consistency, and audience building.</li>
+      </ul>
+      <a class="cta" href="skills.html">Explore skills →</a>
+    </section>
+
+    <!-- STORIES -->
+    <section class="card">
+      <span class="tag">Stories</span>
+      <h2>Stories & Experiences</h2>
+      <h3>The Skill He Learned Too Late</h3>
+      <p>
+        He chased quick wins for years. When he finally focused on learning one skill properly,
+        everything started changing — slowly, then all at once.
+      </p>
+      <p class="muted"><strong>Lesson:</strong> Skills create options. Consistency builds results.</p>
+      <a class="cta" href="stories.html">Read stories →</a>
+    </section>
+
+    <!-- GUIDES (THIS WAS MISSING ON YOUR LIVE PAGE) -->
+    <section class="card">
+      <span class="tag">Guides</span>
+      <h2>Helpful Guides</h2>
+      <ul class="list">
+        <li><strong>How to apply for jobs safely online</strong> (avoid scammers and fake links)</li>
+        <li><strong>Beginner checklist for learning digital skills</strong> (simple weekly plan)</li>
+        <li><strong>How to spot unrealistic promises</strong> (protect your time and money)</li>
+      </ul>
+      <a class="cta" href="guides.html">Read guides →</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Opportunities & Digital Skills</p>
     <p>
-      This opportunity is suitable for beginners interested in online work.
-      Responsibilities include basic content support and communication tasks.
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="disclaimer.html">Disclaimer</a> |
+      <a href="terms.html">Terms</a>
     </p>
-    <a class="cta" href="jobs.html">View jobs →</a>
-  </section>
+  </footer>
 
-  <section>
-    <span class="tag">Learn</span>
-    <h2>Online Skills You Can Learn</h2>
-    <ul class="list">
-      <li>Affiliate Marketing (Basics)</li>
-      <li>Copywriting</li>
-      <li>Content Creation</li>
-      <li>TikTok & YouTube Growth</li>
-    </ul>
-    <a class="cta" href="skills.html">Explore skills →</a>
-  </section>
+  <!-- WhatsApp Floating -->
+  <a href="YOUR_WHATSAPP_LINK_HERE" target="_blank" rel="noopener" class="wa-float" aria-label="Join our WhatsApp">
+    <div class="wa-bubble" id="waBubble">Join our WhatsApp channel</div>
+    <div class="wa-icon" aria-hidden="true">
+      <svg viewBox="0 0 32 32">
+        <path d="M16 2C8.3 2 2 8.3 2 16c0 2.5.7 4.9 2 7.1L2 30l7.1-1.9C11.2 29.3 13.6 30 16 30c7.7 0 14-6.3 14-14S23.7 2 16 2z"/>
+      </svg>
+    </div>
+  </a>
 
-  <section>
-    <span class="tag">Stories</span>
-    <h2>Stories & Experiences</h2>
-    <p>
-      Skills don’t change lives overnight — consistency does.
-    </p>
-    <a class="cta" href="stories.html">Read stories →</a>
-  </section>
-
-</main>
-
-<footer>
-  <p>© 2026 Opportunities & Digital Skills</p>
-  <p>
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="privacy.html">Privacy Policy</a> |
-    <a href="disclaimer.html">Disclaimer</a> |
-    <a href="terms.html">Terms</a>
-  </p>
-</footer>
-
-<!-- ===============================
-     WHATSAPP FLOATING BUTTON
-     =============================== -->
-<a href="https://whatsapp.com/channel/0029Vb7eXlH42Dce8KNDXO44" target="_blank" class="wa-float">
-  <div class="wa-bubble" id="waBubble">Join our WhatsApp channel</div>
-  <div class="wa-icon">
-    <svg viewBox="0 0 32 32">
-      <path d="M16 2C8.3 2 2 8.3 2 16c0 2.5.7 4.9 2 7.1L2 30l7.1-1.9C11.2 29.3 13.6 30 16 30c7.7 0 14-6.3 14-14S23.7 2 16 2z"/>
-    </svg>
-  </div>
-</a>
-
-<script>
-  window.addEventListener("load", function () {
-    const bubble = document.getElementById("waBubble");
-    bubble.classList.add("show");
-    setTimeout(() => bubble.classList.remove("show"), 4500);
-  });
-</script>
+  <script>
+    // Show the bubble on load, then hide it (and show again on refresh/new load)
+    window.addEventListener("load", function () {
+      const bubble = document.getElementById("waBubble");
+      if (!bubble) return;
+      bubble.classList.add("show");
+      setTimeout(() => bubble.classList.remove("show"), 4500);
+    });
+  </script>
 
 </body>
 </html>
