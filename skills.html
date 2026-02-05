@@ -13,28 +13,24 @@
     nav{background:#111827;display:flex;justify-content:center;gap:18px;padding:10px;flex-wrap:wrap}
     nav a{color:#e5e7eb;text-decoration:none;font-weight:bold;font-size:14px}
     nav a:hover{text-decoration:underline}
-    main{max-width:900px;margin:22px auto;padding:0 16px}
-    section{background:#fff;padding:18px;margin-bottom:18px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-    h2{margin-top:0}
-    .tag{display:inline-block;background:#eef2ff;color:#3730a3;padding:4px 8px;border-radius:999px;font-size:12px;margin-bottom:8px;font-weight:bold}
+    main{max-width:980px;margin:22px auto;padding:0 16px}
+    section{background:#fff;padding:18px;margin-bottom:18px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+    .tag{display:inline-block;background:#eef2ff;color:#3730a3;padding:4px 10px;border-radius:999px;font-size:12px;margin-bottom:8px;font-weight:700}
     .muted{color:#6b7280;font-size:14px}
     .grid{display:grid;grid-template-columns:1fr;gap:14px}
     @media (min-width:760px){.grid{grid-template-columns:1fr 1fr}}
-    .skill-card{
+    .card{
       display:block;
       border:1px solid #e5e7eb;
-      border-radius:12px;
+      border-radius:14px;
       padding:16px;
       background:#fafafa;
       text-decoration:none;
       color:#111;
       transition:transform .08s ease, box-shadow .08s ease;
     }
-    .skill-card:hover{
-      transform:translateY(-2px);
-      box-shadow:0 6px 16px rgba(0,0,0,.08);
-    }
-    .skill-card h3{margin:0 0 6px}
+    .card:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.08)}
+    .card h3{margin:0 0 6px}
     .pill{display:inline-block;background:#e5e7eb;border-radius:999px;padding:3px 10px;font-size:12px;margin-top:10px}
     footer{background:#e5e7eb;text-align:center;padding:14px;font-size:14px}
     footer a{color:#111;text-decoration:none;margin:0 8px;font-weight:bold}
@@ -57,16 +53,11 @@
 </nav>
 
 <main>
-
   <section>
     <span class="tag">Start Here</span>
     <h2>Pick One Skill for 30 Days</h2>
-    <p>
-      Don’t try everything at once. Choose one skill, practice daily, and improve step-by-step.
-    </p>
-    <p class="muted">
-      Note: We share learning tips only. No guaranteed income promises.
-    </p>
+    <p>Choose one skill, practice daily, and improve step-by-step. Don’t try to learn everything at once.</p>
+    <p class="muted">Note: We share learning tips only. No guaranteed income promises.</p>
   </section>
 
   <section>
@@ -74,40 +65,31 @@
     <h2>Click to Learn</h2>
 
     <div class="grid">
-
-      <a class="skill-card" href="affiliate.html">
-        <h3>Affiliate Marketing (Beginner)</h3>
-        <p>Learn how affiliate links work, how to choose a niche, and how to promote ethically.</p>
+      <a class="card" href="affiliate.html">
+        <h3>Affiliate Marketing (No Money Start)</h3>
+        <p>Full guide: where to begin, free methods, platforms, pros/cons, signup steps, and mistakes to avoid.</p>
         <span class="pill">Open guide →</span>
       </a>
 
-      <a class="skill-card" href="copywriting.html">
+      <a class="card" href="copywriting.html">
         <h3>Copywriting</h3>
-        <p>Learn how to write clear headlines, offers, and persuasive messages (without manipulation).</p>
-        <span class="pill">Open guide →</span>
+        <p>How to write headlines, offers, ads, and scripts — with beginner exercises and templates.</p>
+        <span class="pill">Coming next →</span>
       </a>
 
-      <a class="skill-card" href="content-creation.html">
+      <a class="card" href="content-creation.html">
         <h3>Content Creation</h3>
-        <p>Learn how to plan content, write scripts, stay consistent, and improve quality.</p>
-        <span class="pill">Open guide →</span>
+        <p>How to plan content, write scripts, stay consistent, and improve quality.</p>
+        <span class="pill">Coming next →</span>
       </a>
 
-      <a class="skill-card" href="tiktok-youtube.html">
+      <a class="card" href="tiktok-youtube.html">
         <h3>TikTok & YouTube Growth</h3>
-        <p>Learn hooks, consistency, simple editing, and how to improve retention.</p>
-        <span class="pill">Open guide →</span>
+        <p>Hooks, retention, simple editing, and how to build an audience without shortcuts.</p>
+        <span class="pill">Coming next →</span>
       </a>
-
-      <a class="skill-card" href="canva.html">
-        <h3>Canva Design</h3>
-        <p>Learn layouts, spacing, and how to create posters, flyers, and thumbnails.</p>
-        <span class="pill">Open guide →</span>
-      </a>
-
     </div>
   </section>
-
 </main>
 
 <footer>
