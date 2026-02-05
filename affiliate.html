@@ -2,95 +2,300 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>How to Start Affiliate Marketing With No Money | Opportunities & Digital Skills</title>
+  <title>Affiliate Marketing (Beginner Guide) | Opportunities & Digital Skills</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A detailed beginner guide: how to start affiliate marketing with no money, step-by-step, free traffic methods, platforms, signup steps, and mistakes to avoid." />
+  <meta name="description" content="A beginner-friendly affiliate marketing guide: how to start, choose a niche, build content, and 15+ affiliate programs with pros and cons." />
 
   <style>
-    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f4f6f8;color:#222;line-height:1.75}
-    header{background:#1f2937;color:#fff;padding:26px 16px;text-align:center}
-    header h1{margin:0;font-size:24px}
-    header p{margin:8px 0 0;opacity:.9}
-
-    nav{background:#111827;display:flex;justify-content:center;gap:18px;padding:10px;flex-wrap:wrap}
-    nav a{color:#e5e7eb;text-decoration:none;font-weight:bold;font-size:14px}
-    nav a:hover{text-decoration:underline}
-
-    main{max-width:980px;margin:22px auto;padding:0 16px}
-    .post{background:#fff;padding:18px;border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-    .meta{color:#6b7280;font-size:14px;margin:6px 0 14px}
-    .hero{
-      width:100%;
-      height:auto;
-      border-radius:14px;
-      border:1px solid #e5e7eb;
-      display:block;
+    :root{
+      --bg:#f4f6f8;
+      --text:#111827;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --border:#e5e7eb;
+      --brand:#1f2937;
+      --brand2:#111827;
+      --link:#2563eb;
+      --tagbg:#eef2ff;
+      --tagtext:#3730a3;
+      --shadow:0 2px 10px rgba(0,0,0,.06);
+      --radius:12px;
     }
-    .tag{display:inline-block;background:#eef2ff;color:#3730a3;padding:4px 10px;border-radius:999px;font-size:12px;margin-bottom:10px;font-weight:700}
 
-    h2{margin-top:28px}
-    h3{margin-top:18px}
-    a{color:#2563eb;font-weight:700;text-decoration:none}
-    a:hover{text-decoration:underline}
-
-    .toc{
-      background:#f9fafb;
-      border:1px solid #e5e7eb;
-      border-radius:12px;
-      padding:14px;
-      margin:16px 0;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
     }
-    .toc strong{display:block;margin-bottom:8px}
-    .toc ul{margin:0;padding-left:18px}
-    .toc li{margin:6px 0}
 
-    .callout{
-      background:#fff7ed;
-      border-left:4px solid #f97316;
-      padding:12px 14px;
-      border-radius:10px;
-      margin:14px 0;
+    header{
+      background:var(--brand);
+      color:#fff;
+      padding:26px 16px;
+      text-align:center;
+    }
+    header h1{margin:0;font-size:26px}
+    header p{margin:8px 0 0;opacity:.92}
+
+    nav{
+      background:var(--brand2);
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      padding:10px;
+      flex-wrap:wrap;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    nav a{
+      color:#e5e7eb;
+      text-decoration:none;
+      font-weight:bold;
       font-size:14px;
     }
+    nav a:hover{ text-decoration:underline; }
 
-    .grid{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:14px;
-      margin:14px 0;
+    main{
+      max-width:980px;
+      margin:22px auto;
+      padding:0 16px 50px;
     }
-    @media (min-width:820px){.grid{grid-template-columns:1fr 1fr}}
+
     .card{
-      border:1px solid #e5e7eb;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      align-items:center;
+    }
+    .hero h2{margin:0 0 6px}
+    .hero p{margin:0;color:#f9fafb;opacity:.95}
+    .heroWrap{
+      background:linear-gradient(135deg,#111827,#1f2937);
+      color:#fff;
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .heroInner{
+      padding:18px;
+    }
+    .hero img{
+      width:100%;
+      height:100%;
+      max-height:260px;
+      object-fit:cover;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,.12);
+      background:#0b1220;
+    }
+
+    .tag{
+      display:inline-block;
+      background:var(--tagbg);
+      color:var(--tagtext);
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:bold;
+      margin-right:6px;
+      border:1px solid #dbeafe;
+    }
+
+    h2{margin:0 0 10px}
+    h3{margin:0 0 10px}
+    h4{margin:0 0 8px}
+
+    .muted{color:var(--muted)}
+    .note{
+      border-left:4px solid #93c5fd;
+      padding:10px 12px;
+      background:#eff6ff;
+      border-radius:10px;
+    }
+
+    .toc a{color:var(--link);text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .toc ul{margin:10px 0 0;padding-left:18px}
+    .toc li{margin:6px 0}
+
+    .steps{
+      display:grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+    @media (max-width: 800px){
+      .hero{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+    }
+    .step{
+      border:1px solid var(--border);
       border-radius:12px;
       padding:14px;
+      background:#fff;
+    }
+    .step b{display:block;margin-bottom:6px}
+
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      color:#fff;
+      background:var(--link);
+      padding:10px 12px;
+      border-radius:10px;
+      font-weight:bold;
+      margin-top:10px;
+    }
+    .btn:hover{filter:brightness(.95)}
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap:14px;
+    }
+    @media (max-width: 900px){
+      .grid3{grid-template-columns:1fr}
+    }
+
+    .platform{
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:14px;
+      background:#fff;
+    }
+    .platform .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-bottom:10px;
+    }
+    .platform .top a{
+      color:var(--link);
+      text-decoration:none;
+      font-weight:bold;
+      word-break:break-word;
+    }
+    .platform .top a:hover{text-decoration:underline}
+    .pill{
+      font-size:12px;
+      padding:3px 8px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      color:#111;
+      background:#f9fafb;
+      white-space:nowrap;
+    }
+    .proscons{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:10px;
+    }
+    @media (max-width: 700px){
+      .proscons{grid-template-columns:1fr}
+    }
+    .box{
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:10px;
       background:#fafafa;
     }
-    .card h4{margin:0 0 8px}
+    .box ul{margin:8px 0 0;padding-left:18px}
+    .box li{margin:6px 0}
 
-    .img-inline{
-      width:100%;
-      height:auto;
+    .faq details{
+      border:1px solid var(--border);
       border-radius:12px;
-      border:1px solid #e5e7eb;
-      display:block;
-      margin:12px 0;
+      padding:12px 14px;
+      background:#fff;
+      margin-bottom:10px;
+    }
+    .faq summary{
+      cursor:pointer;
+      font-weight:bold;
     }
 
-    table{width:100%;border-collapse:collapse;margin:12px 0}
-    th,td{border-bottom:1px solid #e5e7eb;padding:10px;vertical-align:top;text-align:left;font-size:14px}
-    th{background:#f9fafb;font-size:13px;text-transform:uppercase;letter-spacing:.03em}
+    footer{
+      background:#e5e7eb;
+      text-align:center;
+      padding:14px;
+      font-size:14px;
+    }
+    footer a{
+      color:#111;
+      text-decoration:none;
+      margin:0 8px;
+      font-weight:bold;
+    }
+    footer a:hover{ text-decoration:underline; }
 
-    footer{background:#e5e7eb;text-align:center;padding:14px;font-size:14px;margin-top:18px}
-    footer a{color:#111;text-decoration:none;margin:0 8px;font-weight:800}
-    footer a:hover{text-decoration:underline}
+    /* WhatsApp Floating Button */
+    .wa-float{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:999;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+    }
+    .wa-bubble{
+      background:#111827;
+      color:#fff;
+      padding:10px 12px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:bold;
+      box-shadow: var(--shadow);
+      border:1px solid rgba(255,255,255,.08);
+      max-width:240px;
+      opacity:0;
+      transform:translateY(6px);
+      pointer-events:none;
+    }
+    .wa-icon{
+      width:52px;
+      height:52px;
+      border-radius:999px;
+      background:#25D366;
+      display:grid;
+      place-items:center;
+      box-shadow: var(--shadow);
+      border:2px solid rgba(255,255,255,.7);
+    }
+    .wa-icon svg{width:26px;height:26px;fill:#fff}
+    .wa-float.show .wa-bubble{
+      opacity:1;
+      transform:translateY(0);
+      transition: all .35s ease;
+    }
+    .wa-float.hide .wa-bubble{
+      opacity:0;
+      transform:translateY(6px);
+      transition: all .35s ease;
+    }
   </style>
 </head>
 
 <body>
+
 <header>
-  <h1>How to Start Affiliate Marketing With No Money</h1>
-  <p>A detailed, beginner-friendly guide (no hype)</p>
+  <h1>Affiliate Marketing (Beginner Guide)</h1>
+  <p>Learn how to start properly, choose platforms, and build content that earns (no hype, no fake promises)</p>
 </header>
 
 <nav>
@@ -102,181 +307,394 @@
 </nav>
 
 <main>
-  <article class="post">
-    <span class="tag">Affiliate Marketing</span>
-    <div class="meta">
-      Updated: Feb 2026 • Reading time: ~10–15 minutes • <a href="skills.html">← Back to Skills</a>
+
+  <!-- HERO -->
+  <section class="heroWrap card" style="padding:0">
+    <div class="hero heroInner">
+      <div>
+        <span class="tag">Skill</span>
+        <span class="tag">Beginner Friendly</span>
+        <h2 style="margin-top:10px;">Affiliate Marketing: Start With Zero Confusion</h2>
+        <p class="muted" style="color:#d1d5db;">
+          Affiliate marketing means recommending products/services and earning a commission when someone buys through your unique link.
+          The real work is building trust + content. This guide shows a practical path.
+        </p>
+        <a class="btn" href="#start">Start here</a>
+      </div>
+
+      <!-- IMPORTANT: change the filename to your real uploaded image name -->
+      <!-- Example: images/affiliate-hero.png  OR images/file_0000xxxx.png -->
+      <img src="images/affiliate-hero.png" alt="Affiliate marketing hero image">
     </div>
+  </section>
 
-    <!-- HERO IMAGE -->
-    <img class="hero" src="images/affiliate-hero.jpg" alt="Laptop showing analytics and a person planning content" />
+  <!-- QUICK WARNING / DISCLAIMER -->
+  <section class="card note">
+    <b>Important:</b> This page is for education. We don’t guarantee income. Results depend on your niche, consistency, traffic, and honesty.
+    Avoid “get-rich-quick” claims. Focus on value.
+  </section>
 
+  <!-- TABLE OF CONTENTS -->
+  <section class="card toc">
+    <h2>On this page</h2>
+    <ul>
+      <li><a href="#start">How affiliate marketing works</a></li>
+      <li><a href="#stepbystep">Step-by-step: how to start (even with no money)</a></li>
+      <li><a href="#platforms">15 affiliate platforms (pros & cons + links)</a></li>
+      <li><a href="#content">Content plan that works</a></li>
+      <li><a href="#mistakes">Common mistakes to avoid</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="card" id="start">
+    <h2>1) How affiliate marketing works</h2>
     <p>
-      Affiliate marketing is one of the simplest online models to understand: you recommend a product or service
-      using a tracked link, and if someone buys through your link, you may earn a commission.
-      You don’t need to create a product to start — but you do need <strong>trust + useful content</strong>.
+      You join an affiliate program, get a special tracking link, and share it through content.
+      When people click your link and complete an action (usually a purchase), you earn a commission.
     </p>
 
-    <div class="callout">
-      <strong>Quick note:</strong> This guide is for education. There is no guaranteed income. Avoid programs that promise “instant money”.
+    <div class="steps">
+      <div class="step">
+        <b>Step A: Pick a niche</b>
+        <span class="muted">Example: phones, laptops, travel, online courses, beauty, finance tools, job platforms.</span>
+      </div>
+      <div class="step">
+        <b>Step B: Choose a platform</b>
+        <span class="muted">Join affiliate programs that match your niche (Amazon, Jumia, Impact, etc.).</span>
+      </div>
+      <div class="step">
+        <b>Step C: Create helpful content</b>
+        <span class="muted">Reviews, comparisons, “how to choose”, beginner guides, tutorials.</span>
+      </div>
+      <div class="step">
+        <b>Step D: Drive traffic</b>
+        <span class="muted">SEO + social media + WhatsApp/Telegram communities + email list (later).</span>
+      </div>
     </div>
+  </section>
 
-    <!-- TOC -->
-    <div class="toc">
-      <strong>On this page</strong>
-      <ul>
-        <li><a href="#what-is">What affiliate marketing is</a></li>
-        <li><a href="#mindset">The right mindset (so you don’t quit)</a></li>
-        <li><a href="#step-by-step">Step-by-step: how to start with no money</a></li>
-        <li><a href="#free-traffic">Free traffic methods that actually work</a></li>
-        <li><a href="#platforms">16 affiliate platforms (pros/cons + links)</a></li>
-        <li><a href="#signup">How to sign up (simple checklist)</a></li>
-        <li><a href="#content">Content ideas that convert</a></li>
-        <li><a href="#mistakes">Common mistakes to avoid</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-    </div>
+  <!-- STEP-BY-STEP -->
+  <section class="card" id="stepbystep">
+    <h2>2) Step-by-step: how to start (even with no money)</h2>
 
-    <h2 id="what-is">1) What affiliate marketing is</h2>
+    <h3>Step 1 — Choose a niche people actually search for</h3>
+    <ul>
+      <li><b>Good niches:</b> products with regular demand + clear problem/solution.</li>
+      <li><b>Avoid:</b> too broad (e.g., “make money online”) unless you narrow it down.</li>
+    </ul>
+
+    <h3>Step 2 — Create a simple content base</h3>
     <p>
-      Affiliate marketing is recommending something helpful (a course, tool, hosting, software, service)
-      and getting a unique tracking link. When people buy through your link, you may earn.
+      Your website can win if your posts are specific and helpful. Start with 5–10 posts:
+    </p>
+    <ul>
+      <li>“Best ____ for beginners (2026)”</li>
+      <li>“____ vs ____: which is better?”</li>
+      <li>“How to choose ____ (checklist)”</li>
+      <li>“How to use ____ (step-by-step)”</li>
+      <li>“Top mistakes when buying ____”</li>
+    </ul>
+
+    <h3>Step 3 — Join affiliate programs</h3>
+    <p>
+      Register on platforms below and apply to programs that match your content.
+      Some approve instantly, others review your site.
     </p>
 
-    <!-- INLINE IMAGE -->
-    <img class="img-inline" src="images/affiliate-diagram.jpg" alt="Simple diagram: content -> affiliate link -> purchase -> commission" />
+    <h3>Step 4 — Add your links correctly</h3>
+    <ul>
+      <li>Use your tracking link only where it makes sense (don’t spam).</li>
+      <li>Always disclose: “This page may contain affiliate links.”</li>
+      <li>Track clicks and conversions from the affiliate dashboard.</li>
+    </ul>
 
-    <h2 id="mindset">2) The right mindset</h2>
-    <div class="grid">
-      <div class="card">
-        <h4>Start small</h4>
-        <p>Pick one niche and 1–2 platforms first. Build confidence before expanding.</p>
+    <h3>Step 5 — Improve content + traffic</h3>
+    <ul>
+      <li>Update old posts monthly.</li>
+      <li>Answer questions people ask in comments/social media.</li>
+      <li>Learn basic SEO: titles, headings, keywords, internal links.</li>
+    </ul>
+  </section>
+
+  <!-- PLATFORMS -->
+  <section class="card" id="platforms">
+    <h2>3) 15 affiliate platforms (with pros & cons)</h2>
+    <p class="muted">
+      Tip: Start with 2–3 platforms first. Don’t join 15 at once. Master a few.
+    </p>
+
+    <div class="grid3">
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://affiliate-program.amazon.com/" target="_blank" rel="noopener">Amazon Associates</a>
+          <span class="pill">Physical Products</span>
+        </div>
+        <div class="muted">Huge product variety and trust.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>High trust = easier conversions</li><li>Many categories</li><li>Easy to find products</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Commission varies</li><li>Short cookie window (varies by region)</li><li>Rules are strict</li></ul></div>
+        </div>
       </div>
-      <div class="card">
-        <h4>Help first</h4>
-        <p>Make your content useful. People click links when they trust you.</p>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://affiliate.aliexpress.com/" target="_blank" rel="noopener">AliExpress Affiliate</a>
+          <span class="pill">Physical Products</span>
+        </div>
+        <div class="muted">Many low-cost products + global shipping.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>Affordable products</li><li>Many categories</li><li>Good for gadget niches</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Shipping time can be long</li><li>Quality varies by seller</li><li>Needs careful product selection</li></ul></div>
+        </div>
       </div>
-      <div class="card">
-        <h4>Be consistent</h4>
-        <p>Post weekly (or daily small). Affiliate marketing rewards patience.</p>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://www.jumia.com/affiliate/" target="_blank" rel="noopener">Jumia Affiliate</a>
+          <span class="pill">Africa Focus</span>
+        </div>
+        <div class="muted">Strong local interest in many African countries.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>Local relevance</li><li>Easy product ideas</li><li>Works with content + social traffic</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Country availability differs</li><li>Stock changes quickly</li><li>Commission varies</li></ul></div>
+        </div>
       </div>
-      <div class="card">
-        <h4>Be honest</h4>
-        <p>Say who a product is for and who it’s not for. That honesty converts.</p>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://www.impact.com/" target="_blank" rel="noopener">Impact</a>
+          <span class="pill">Network</span>
+        </div>
+        <div class="muted">Big brands, strong tracking, many programs.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>Many brands</li><li>Good reporting</li><li>Reliable tracking</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Some programs are hard to get approved</li><li>Needs a decent site/content</li></ul></div>
+        </div>
       </div>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://www.shareasale.com/" target="_blank" rel="noopener">ShareASale</a>
+          <span class="pill">Network</span>
+        </div>
+        <div class="muted">Popular affiliate network with many merchants.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>Many niches</li><li>Easy to discover programs</li><li>Good dashboards</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Approval depends on merchants</li><li>Some offers are region-limited</li></ul></div>
+        </div>
+      </div>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://www.cj.com/" target="_blank" rel="noopener">CJ (Commission Junction)</a>
+          <span class="pill">Network</span>
+        </div>
+        <div class="muted">Large network with well-known brands.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>Strong brands</li><li>Trustworthy network</li><li>Good tracking</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Harder for brand-new sites</li><li>Some programs require traffic</li></ul></div>
+        </div>
+      </div>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://partnerstack.com/" target="_blank" rel="noopener">PartnerStack</a>
+          <span class="pill">SaaS</span>
+        </div>
+        <div class="muted">Great for software/tools affiliates.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>High commissions on SaaS</li><li>Recurring payouts (some programs)</li><li>Good for B2B content</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Needs targeted content</li><li>Not ideal for general audiences</li></ul></div>
+        </div>
+      </div>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://www.clickbank.com/" target="_blank" rel="noopener">ClickBank</a>
+          <span class="pill">Digital Products</span>
+        </div>
+        <div class="muted">Digital products (courses/ebooks) with high commissions.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>High commission rates</li><li>Many categories</li><li>Fast to start</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Quality varies—vet products</li><li>Some products feel spammy</li></ul></div>
+        </div>
+      </div>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://www.digistore24.com/" target="_blank" rel="noopener">Digistore24</a>
+          <span class="pill">Digital Products</span>
+        </div>
+        <div class="muted">Digital offers and tools, popular in some regions.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>Decent commissions</li><li>Easy product listings</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Not all niches available</li><li>Need careful offer selection</li></ul></div>
+        </div>
+      </div>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://partnernetwork.ebay.com/" target="_blank" rel="noopener">eBay Partner Network</a>
+          <span class="pill">Marketplace</span>
+        </div>
+        <div class="muted">Good for collectibles, gadgets, and used items.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>Trusted marketplace</li><li>Many categories</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Listings change often</li><li>Commission varies</li></ul></div>
+        </div>
+      </div>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://www.shopify.com/affiliates" target="_blank" rel="noopener">Shopify Affiliate</a>
+          <span class="pill">SaaS</span>
+        </div>
+        <div class="muted">Promote Shopify to people starting online stores.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>Strong brand</li><li>Good commissions (varies)</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Needs business-focused content</li><li>Approval is selective</li></ul></div>
+        </div>
+      </div>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://partnernetwork.google.com/" target="_blank" rel="noopener">Google Partners (Ads/Services)</a>
+          <span class="pill">Advanced</span>
+        </div>
+        <div class="muted">Not a classic affiliate marketplace—more for agencies/services.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>High credibility</li><li>Good for service businesses</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Not for beginners</li><li>Requirements can be strict</li></ul></div>
+        </div>
+      </div>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://partner.booking.com/" target="_blank" rel="noopener">Booking.com Affiliate Partner</a>
+          <span class="pill">Travel</span>
+        </div>
+        <div class="muted">Best if you write travel content or relocation guides.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>High demand niche</li><li>Works well with SEO content</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Travel is competitive</li><li>Seasonal traffic changes</li></ul></div>
+        </div>
+      </div>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://www.udemy.com/affiliate/" target="_blank" rel="noopener">Udemy Affiliate</a>
+          <span class="pill">Courses</span>
+        </div>
+        <div class="muted">Promote courses for skills like coding, design, business.</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>Easy content ideas</li><li>Trusted marketplace</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Commission varies</li><li>Course quality varies</li></ul></div>
+        </div>
+      </div>
+
+      <div class="platform">
+        <div class="top">
+          <a href="https://www.fiverr.com/affiliates" target="_blank" rel="noopener">Fiverr Affiliates</a>
+          <span class="pill">Services</span>
+        </div>
+        <div class="muted">Promote freelance services (design, writing, video, etc.).</div>
+        <div class="proscons">
+          <div class="box"><b>Pros</b><ul><li>Many service niches</li><li>Good for business content</li></ul></div>
+          <div class="box"><b>Cons</b><ul><li>Need the right audience</li><li>Competition in some topics</li></ul></div>
+        </div>
+      </div>
+
     </div>
 
-    <h2 id="step-by-step">3) Step-by-step: start with no money</h2>
-    <h3>Step A — Choose your niche</h3>
-    <p>Pick a niche that matches what people already search for (and you can keep writing about):</p>
-    <ul>
-      <li>Online skills & courses</li>
-      <li>Websites & hosting</li>
-      <li>Freelancing tools</li>
-      <li>Content creation tools</li>
-      <li>Tech gadgets</li>
-    </ul>
-
-    <h3>Step B — Choose your platform (free)</h3>
-    <ul>
-      <li><strong>This website:</strong> publish guides and tool lists (best long-term)</li>
-      <li><strong>TikTok/YouTube:</strong> post short tips that link to your guide</li>
-      <li><strong>WhatsApp:</strong> share new posts to people who asked for updates (no spam)</li>
-    </ul>
-
-    <h3>Step C — Publish 3 starter posts</h3>
-    <ul>
-      <li>“How to start affiliate marketing with no money” (this page)</li>
-      <li>“Best tools for beginners” (pros/cons + links)</li>
-      <li>“How to avoid scams” (builds trust)</li>
-    </ul>
-
-    <h2 id="free-traffic">4) Free traffic methods that actually work</h2>
-    <img class="img-inline" src="images/free-traffic.jpg" alt="Phone showing TikTok and YouTube icons and a blog on laptop" />
-    <ul>
-      <li><strong>SEO (Google search):</strong> write posts people search for (“best X for beginners”).</li>
-      <li><strong>TikTok short tips:</strong> 20–40 seconds, one clear tip, then “full guide on my website”.</li>
-      <li><strong>YouTube tutorials:</strong> longer explainers (even simple screen recordings).</li>
-      <li><strong>Facebook groups:</strong> answer questions and link your guide only when relevant.</li>
-    </ul>
-
-    <div class="callout">
-      <strong>Rule:</strong> Don’t paste links everywhere. Build content. Then link naturally inside your content.
+    <div class="card" style="margin-top:14px;background:#fff;border:1px solid var(--border);">
+      <h3 style="margin-top:0;">How to sign up (simple checklist)</h3>
+      <ol>
+        <li>Open the platform link above.</li>
+        <li>Create an account (use your real details).</li>
+        <li>Complete your profile (website link + niche + traffic source).</li>
+        <li>Apply to programs (if it’s a network).</li>
+        <li>Generate your tracking link and test it.</li>
+        <li>Add a short disclosure on your pages: “This page may contain affiliate links.”</li>
+      </ol>
     </div>
+  </section>
 
-    <h2 id="platforms">5) 16 affiliate platforms (pros/cons + links)</h2>
-    <p>Start with 2–3 only. Learn them well first.</p>
+  <!-- CONTENT PLAN -->
+  <section class="card" id="content">
+    <h2>4) Content plan that works (simple + consistent)</h2>
+    <p>
+      If you want people to stay longer on your site, your posts must be structured and clear:
+      headings, checklists, comparisons, real examples, and simple language.
+    </p>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Platform</th>
-          <th>Best for</th>
-          <th>Pros</th>
-          <th>Cons</th>
-          <th>Link</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Amazon Associates</td><td>Products</td><td>Huge catalog, trusted</td><td>Rules strict, rates vary</td><td><a href="https://affiliate-program.amazon.com/" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>eBay Partner Network</td><td>Marketplace</td><td>Deals content works well</td><td>Inventory changes</td><td><a href="https://partnernetwork.ebay.com/" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>Impact</td><td>Big brands network</td><td>Many quality programs</td><td>Brand approvals vary</td><td><a href="https://impact.com/partners/affiliate-partners/" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>CJ Affiliate</td><td>Established advertisers</td><td>Strong reporting</td><td>Some strict approvals</td><td><a href="https://www.cj.com/" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>Awin</td><td>Global brands</td><td>Large network</td><td>Program-by-program approval</td><td><a href="https://www.awin.com/" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>Rakuten Advertising</td><td>Retail brands</td><td>Strong retail partners</td><td>Some selective brands</td><td><a href="https://rakutenadvertising.com/affiliate/" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>ClickBank</td><td>Digital products</td><td>Often higher commissions</td><td>Offer quality varies</td><td><a href="https://www.clickbank.com/" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>Digistore24</td><td>Digital subscriptions</td><td>Easy to join</td><td>Some spammy niches</td><td><a href="https://www.digistore24.com/" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>PartnerStack</td><td>SaaS tools</td><td>Good software programs</td><td>Best with tech audience</td><td><a href="https://partnerstack.com/" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>Fiverr Affiliates</td><td>Freelance services</td><td>Fits “online skills” niche</td><td>Needs explanation content</td><td><a href="https://www.fiverr.com/affiliates" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>Upwork Affiliate</td><td>Freelance marketplace</td><td>Trusted platform</td><td>Audience must want freelancing</td><td><a href="https://www.upwork.com/" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>Hostinger</td><td>Web hosting</td><td>Great with website tutorials</td><td>Competitive niche</td><td><a href="https://www.hostinger.com/affiliates" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>Bluehost</td><td>WordPress hosting</td><td>Popular in blogging niche</td><td>Competitive niche</td><td><a href="https://www.bluehost.com/affiliates" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>Canva</td><td>Design tutorials</td><td>Easy to teach + promote</td><td>Don’t oversell</td><td><a href="https://www.canva.com/" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>Coursera</td><td>Courses</td><td>Strong brand for education</td><td>May run via network</td><td><a href="https://www.coursera.org/" target="_blank" rel="noopener">Visit</a></td></tr>
-        <tr><td>Udemy</td><td>Courses</td><td>Huge catalog</td><td>May run via network</td><td><a href="https://www.udemy.com/" target="_blank" rel="noopener">Visit</a></td></tr>
-      </tbody>
-    </table>
-
-    <h2 id="signup">6) How to sign up (simple checklist)</h2>
+    <h3>Beginner post ideas</h3>
     <ul>
-      <li>Have a few real pages/posts on your site (About + Contact + 3 guides).</li>
-      <li>Be honest about your niche and traffic sources.</li>
-      <li>Use clear disclosures: “This post may contain affiliate links…”</li>
-      <li>After joining a network (Impact/CJ/Awin), apply to specific brands inside.</li>
+      <li>Best laptops for students in Ghana (2026) — with comparisons</li>
+      <li>How to choose a good phone under GHS 2,000</li>
+      <li>Cheapest ways to start a YouTube channel (tools + budget)</li>
+      <li>Best online course platforms for beginners</li>
+      <li>How to avoid scams in online jobs and affiliate offers</li>
     </ul>
 
-    <h2 id="content">7) Content ideas that convert</h2>
+    <h3>Simple weekly schedule</h3>
     <ul>
-      <li>“Best tools for beginners (honest pros/cons)”</li>
-      <li>“How to use X step-by-step”</li>
-      <li>“X vs Y: which is better for beginners?”</li>
-      <li>“Mistakes beginners make with X”</li>
+      <li><b>2 posts/week:</b> One “How to…” and one “Best/Top…”</li>
+      <li><b>Daily:</b> Share one helpful section to WhatsApp/TikTok/FB and link back</li>
+      <li><b>Weekly:</b> Update 1 older post (improves Google ranking)</li>
     </ul>
+  </section>
 
-    <h2 id="mistakes">8) Common mistakes to avoid</h2>
+  <!-- MISTAKES -->
+  <section class="card" id="mistakes">
+    <h2>5) Common mistakes to avoid</h2>
     <ul>
-      <li>Copying other blogs word-for-word</li>
-      <li>Promising guaranteed income</li>
-      <li>Spamming links without value</li>
-      <li>Promoting products you don’t understand</li>
+      <li><b>Copy-pasting content</b> from other sites (copyright + AdSense risk).</li>
+      <li><b>Too many links</b> without useful explanations.</li>
+      <li><b>No disclosure</b> (always disclose affiliate links).</li>
+      <li><b>Promoting bad products</b> just for money (kills trust).</li>
+      <li><b>No niche focus</b> (people don’t know what your site is about).</li>
     </ul>
+  </section>
 
-    <h2 id="faq">9) FAQ</h2>
-    <h3>Can I start with zero followers?</h3>
-    <p>Yes. Start with your website posts + basic SEO, and share on TikTok/WhatsApp gradually.</p>
+  <!-- FAQ -->
+  <section class="card faq" id="faq">
+    <h2>FAQ</h2>
 
-    <h3>Do I need a custom domain?</h3>
-    <p>No. You can start on GitHub Pages. A custom domain helps branding later.</p>
+    <details>
+      <summary>Do I need money to start affiliate marketing?</summary>
+      <p>
+        You can start with almost no money if you use free traffic (SEO, social media) and free platforms.
+        A website helps long-term, but you can also start with content on social platforms.
+      </p>
+    </details>
 
-    <h3>How many platforms should I join?</h3>
-    <p>Start with 2–3. Learn them well. Expand after you start getting clicks.</p>
+    <details>
+      <summary>How long before I see results?</summary>
+      <p>
+        Depends on your traffic. SEO often takes weeks/months. Social media can be faster, but it needs consistency.
+      </p>
+    </details>
 
-    <div class="callout">
-      Want me to help you pick the best 3 platforms for your exact audience (Ghana + online skills)? Tell me your top niche: hosting, courses, freelancing, or tech.
-    </div>
+    <details>
+      <summary>Can I use AI to write posts?</summary>
+      <p>
+        Yes, but you must edit it heavily and make it original and useful. Avoid copying from other sites.
+        Add your own examples, structure, and local context.
+      </p>
+    </details>
 
-    <p><a href="skills.html">← Back to Skills</a></p>
-  </article>
+    <details>
+      <summary>What should I do next?</summary>
+      <p>
+        Next we can build: (1) a full “Affiliate Marketing with No Money” long article, (2) a resources page,
+        (3) a beginner checklist download page, and (4) internal links from Skills → Affiliate.
+      </p>
+    </details>
+  </section>
+
 </main>
 
 <footer>
@@ -289,5 +707,35 @@
     <a href="terms.html">Terms</a>
   </p>
 </footer>
+
+<!-- WhatsApp Floating Button (EDIT the link) -->
+<a class="wa-float hide" id="waFloat"
+   href="https://wa.me/233XXXXXXXXX?text=Hi%20I%20found%20your%20site%20and%20want%20to%20join%20your%20WhatsApp%20channel"
+   target="_blank" rel="noopener"
+   aria-label="Join our WhatsApp channel">
+  <div class="wa-bubble" id="waBubble">Join our WhatsApp channel</div>
+  <div class="wa-icon" aria-hidden="true">
+    <!-- WhatsApp SVG -->
+    <svg viewBox="0 0 32 32">
+      <path d="M19.11 17.53c-.27-.14-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.72-1.34-1.61-1.5-1.88-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.66 1.12 2.84.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.65.21 1.24.18 1.7.11.52-.08 1.61-.66 1.84-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32zM16.02 27.6h-.01c-1.9 0-3.76-.51-5.39-1.47l-.39-.23-4 1.05 1.07-3.9-.25-.4a11.26 11.26 0 0 1-1.73-6c0-6.22 5.06-11.28 11.29-11.28 3.02 0 5.86 1.18 7.99 3.32a11.22 11.22 0 0 1 3.31 8c0 6.22-5.06 11.28-11.28 11.28zm9.58-20.86A13.5 13.5 0 0 0 16.04 3C8.33 3 2.06 9.27 2.06 16.98c0 2.45.64 4.84 1.86 6.95L2 31l7.24-1.9a13.87 13.87 0 0 0 6.8 1.74h.01c7.7 0 13.98-6.27 13.98-13.98 0-3.74-1.46-7.26-4.13-9.92z"/>
+    </svg>
+  </div>
+</a>
+
+<script>
+  // Show "Join our WhatsApp channel" bubble on load, then hide automatically
+  (function(){
+    var el = document.getElementById('waFloat');
+    if(!el) return;
+    el.classList.remove('hide');
+    el.classList.add('show');
+
+    setTimeout(function(){
+      el.classList.remove('show');
+      el.classList.add('hide');
+    }, 3500);
+  })();
+</script>
+
 </body>
 </html>
